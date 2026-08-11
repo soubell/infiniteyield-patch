@@ -11828,6 +11828,7 @@ end)
 
 walkflinging = false
 addcmd("walkfling", {}, function(args, speaker)
+	if walkflinging then return end
 	execCmd("unwalkfling")
 	local humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
 	if humanoid then
